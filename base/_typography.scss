@@ -1,0 +1,16 @@
+body {
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: $color-grey;
+}
+.heading-primary {
+    color: $color-black;
+    font-size: 6rem;
+    font-weight: 400;
+    // text-transform: uppercase;
+
+    backface-visibility: hidden;
+    // margin-bottom: 6rem;
+
+}

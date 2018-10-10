@@ -1,0 +1,29 @@
+/* Base */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html {
+    /* defines what 1rem is */
+    font-size: 62.5%; /* =  10px; */
+}
+body {
+    box-sizing: border-box;
+    padding: 2rem;
+
+    @include respond(phone) {
+        padding: 0;
+    }
+}
+.header {
+    height: 20vh;
+    background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(http://hsaitodesign.com/images/body_bg.gif);
+    background-size: cover;
+    /* background: #113BB2; */
+    position: relative;
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+}
