@@ -1,0 +1,268 @@
+/*
+    0 - 450px:   Small Phone
+  450 - 600px:   Phone
+  600 - 900px:   Tablet portrait
+ 900 - 1200px:   Tablet landscape
+1200 - 1800px:   Desktop
+    1800px + :   Big desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+/* Base */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  /* defines what 1rem is */
+  font-size: 62.5%;
+  /* =  10px; */ }
+
+body {
+  box-sizing: border-box;
+  padding: 2rem; }
+  @media only screen and (max-width: 37.5em) {
+    body {
+      padding: 0; } }
+
+body {
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #808080; }
+  @media only screen and (max-width: 37.5em) {
+    body {
+      font-size: 1.4rem;
+      line-height: 1.5; } }
+  body p {
+    margin-bottom: 1rem; }
+
+a {
+  text-decoration: none; }
+
+h1 {
+  font-size: 4rem; }
+  @media only screen and (max-width: 37.5em) {
+    h1 {
+      font-size: 2rem; } }
+
+h2 {
+  font-size: 2.5rem;
+  color: #000;
+  margin: 2rem 0 3rem 0;
+  text-align: center; }
+  @media only screen and (max-width: 37.5em) {
+    h2 {
+      font-size: 1.7rem; } }
+
+.biogrpahy p {
+  font-size: 100%; }
+
+.container {
+  max-width: 114rem;
+  margin: 0 auto; }
+  @media only screen and (max-width: 75em) {
+    .container {
+      margin: 0 2rem; } }
+
+.row .col-1-of-3 {
+  width: calc((100% - 2 * 3rem) / 3);
+  float: left; }
+  .row .col-1-of-3:not(:nth-child(3)) {
+    margin-right: 3rem; }
+    @media only screen and (max-width: 56.25em) {
+      .row .col-1-of-3:not(:nth-child(3)) {
+        margin-right: 0; } }
+  @media only screen and (max-width: 56.25em) {
+    .row .col-1-of-3 {
+      width: 100%; } }
+
+header {
+  background: #113BB2;
+  height: 10rem; }
+  header .header {
+    max-width: 114rem;
+    height: 100%;
+    margin: 0 auto;
+    position: relative; }
+    header .header .header-primary {
+      float: left;
+      line-height: 1;
+      padding-top: 1.5rem; }
+      header .header .header-primary--main {
+        display: block;
+        color: #fff;
+        font-size: 4rem;
+        font-weight: 400; }
+        @media only screen and (max-width: 37.5em) {
+          header .header .header-primary--main {
+            display: initial;
+            font-size: 3rem; } }
+      header .header .header-primary--sub {
+        display: block;
+        font-size: 2rem;
+        color: #c0c0c0;
+        font-weight: 300;
+        font-style: italic; }
+        @media only screen and (max-width: 37.5em) {
+          header .header .header-primary--sub {
+            display: initial;
+            font-size: 2.8rem; } }
+      header .header .header-primary a {
+        text-decoration: none; }
+      @media only screen and (max-width: 75em) {
+        header .header .header-primary {
+          padding-left: 2rem; } }
+      @media only screen and (max-width: 37.5em) {
+        header .header .header-primary {
+          padding-left: 1rem;
+          padding-right: 1rem;
+          float: none;
+          text-align: center; } }
+    header .header nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0; }
+      header .header nav ul li {
+        display: inline-block;
+        list-style: none; }
+        header .header nav ul li:not(:last-child) {
+          margin-right: 2rem; }
+        header .header nav ul li a {
+          color: #c0c0c0; }
+          header .header nav ul li a:hover {
+            color: #fff;
+            font-weight: 500; }
+        @media only screen and (max-width: 37.5em) {
+          header .header nav ul li {
+            right: 2rem; } }
+      header .header nav ul .active a {
+        color: #fff;
+        font-weight: 500; }
+      @media only screen and (max-width: 75em) {
+        header .header nav {
+          right: 2rem; } }
+      @media only screen and (max-width: 37.5em) {
+        header .header nav {
+          position: relative;
+          top: initial;
+          transform: initial;
+          right: initial;
+          text-align: center;
+          margin-top: .5rem;
+          margin-bottom: 1.5rem; } }
+  @media only screen and (max-width: 37.5em) {
+    header {
+      height: auto; } }
+
+.harry_profile {
+  border-radius: 50%; }
+
+#resume h2 {
+  font-size: 2.5rem;
+  color: #000;
+  margin: 3rem 0 2rem 0;
+  text-align: left; }
+  @media only screen and (max-width: 75em) {
+    #resume h2 {
+      padding-left: 2rem; } }
+  @media only screen and (max-width: 37.5em) {
+    #resume h2 {
+      text-align: center;
+      line-height: initial;
+      padding-left: initial; } }
+
+#resume h3 {
+  color: #1341C5;
+  font-size: 2rem; }
+
+#resume h4 {
+  color: #1341C5;
+  font-size: 1.7rem; }
+
+@media only screen and (max-width: 75em) {
+  #resume.container {
+    margin: 0; } }
+
+@media only screen and (max-width: 37.5em) {
+  #resume.container {
+    margin: 0 2rem; } }
+
+.skills {
+  display: flex;
+  margin: 1rem 0 3rem 0; }
+  .skills--type {
+    width: 48%;
+    padding: 1.5rem 2rem 3rem 2rem;
+    box-shadow: 0 0.5rem 4rem rgba(0, 0, 0, 0.15); }
+    .skills--type:not(:last-child) {
+      margin-right: 4%; }
+    .skills--type::after {
+      content: "";
+      display: table;
+      clear: both; }
+    .skills--type ul {
+      list-style: none; }
+      .skills--type ul li {
+        float: left; }
+        .skills--type ul li:not(:last-child)::after {
+          content: ", ";
+          padding-right: .5rem; }
+  @media only screen and (max-width: 56.25em) {
+    .skills {
+      display: initial; }
+      .skills--type {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 2rem; }
+        .skills--type:not(:last-child) {
+          margin-right: 0; } }
+
+.resume-box {
+  padding: 3rem 2rem;
+  box-shadow: 0 0.5rem 4rem rgba(0, 0, 0, 0.15); }
+
+.resume-list {
+  border-left-width: 2px;
+  border-left-style: solid;
+  border-color: #ececec;
+  margin-left: 2rem;
+  padding: 0 2rem 2rem;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap; }
+  .resume-list h3, .resume-list h4 {
+    line-height: 1.3; }
+  .resume-list--item {
+    width: 40%;
+    margin-right: 2%; }
+  .resume-list--description {
+    width: 58%; }
+    .resume-list--description ul {
+      margin-left: 1rem;
+      padding-left: 1rem;
+      line-height: 1.2; }
+      .resume-list--description ul li {
+        padding-bottom: .5rem; }
+  .resume-list:before {
+    content: '';
+    background: #F8BB10;
+    height: 1rem;
+    width: 1rem;
+    position: absolute;
+    left: -.6rem;
+    top: .8rem;
+    border-radius: 50%;
+    box-shadow: 0 0 0 6px #fff; }
+  @media only screen and (max-width: 56.25em) {
+    .resume-list--item {
+      width: 100%;
+      margin-right: 0; }
+    .resume-list--description {
+      width: 100%; } }
