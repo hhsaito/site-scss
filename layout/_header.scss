@@ -1,0 +1,120 @@
+header {
+    background: #113BB2;
+    height: 10rem;
+
+    .header {
+        max-width: $grid-width;
+        height: 100%;
+        margin: 0 auto;
+        position: relative;
+
+        .header-primary {
+            float: left;
+            line-height: 1;
+            padding-top: 1.5rem;
+
+            &--main {
+                display: block;
+                color: $color-white;
+                font-size: 4rem;
+                font-weight: 400;
+
+                @include respond( phone ) {
+                    display: initial;
+                    font-size: 3rem;
+                }
+            }
+
+            &--sub {
+                display: block;
+                font-size: 2rem;
+                color: $color-silver;
+                font-weight: 300;
+                font-style: italic;
+
+                @include respond( phone ) {
+                    display: initial;
+                    font-size: 2.8rem;
+                }
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+            @include respond( tab-land ) {
+                padding-left: 2rem;
+            }
+
+            @include respond( phone ) {
+                padding-left: 1rem;
+                padding-right: 1rem;
+                float: none;
+                text-align: center;
+            }
+        }
+        
+        nav {
+            @include topCenter;
+            right: 0;
+    
+            ul {
+                
+                li {
+                    // float: left;
+                    display: inline-block;
+                    list-style: none;
+        
+                    &:not(:last-child) {
+                        margin-right: 2rem;
+                    }
+        
+                    a {
+                        color: $color-silver;
+        
+                        &:hover {
+                            color: $color-white;
+                            font-weight: 500;
+                        }
+
+                    }
+
+                    @include respond(phone) {
+                        right: 2rem;
+                    }
+                }
+
+                .active a {
+                    color: $color-white;
+                    font-weight: 500;
+                }
+            }
+
+            @include respond(tab-land) {
+                right: 2rem;
+            }
+
+            @include respond(phone) {
+                @include topCenterUndo;
+                right: initial;
+                text-align: center;
+                margin-top: .5rem;
+                margin-bottom: 1.5rem;
+                // background-color: $color-white;
+                // margin-top: 1.5rem;
+            }
+        }
+    }
+    @include respond(phone) {
+        height: auto;
+    }
+}
+// .header {
+//     height: 20vh;
+//     background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(http://hsaitodesign.com/images/body_bg.gif);
+//     background-size: cover;
+//     /* background: #113BB2; */
+//     position: relative;
+//     -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+//     clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+// }

@@ -1,4 +1,28 @@
-main, .header {
+.container {
     max-width: $grid-width;
     margin: 0 auto;
+
+    @include respond( tab-land ) {
+        margin: 0 2rem;
+    }
 }    
+
+.row {
+    .col-1-of-3 {
+        width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
+        float: left;
+    
+        &:not(:nth-child(3)) {
+            margin-right: $gutter-horizontal;
+    
+            @include respond(tab-port) {
+                margin-right: 0;
+                // margin-bottom: $gutter-vertical-small;
+            }
+        }
+    
+        @include respond(tab-port) {
+            width: 100%;
+        }
+    }
+}
