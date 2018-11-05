@@ -4,8 +4,12 @@
 @import "base/base";
 @import "base/typography";
 
+@import "components/examples";
+
 @import "layout/grid";
 @import "layout/header";
+@import "layout/footer";
 
 @import "pages/home";
 @import "pages/resume";
+@import "pages/whoozwho";
