@@ -90,12 +90,14 @@ h2 {
           display: none; } }
     .examples__photo:hover {
       outline: 1.5rem solid #1341C5;
-      transform: scale(1.05) translateY(-0.5rem);
+      -webkit-transform: scale(1.05) translateY(-0.5rem);
+              transform: scale(1.05) translateY(-0.5rem);
       box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
       z-index: 20; }
       @media only screen and (max-width: 56.25em) {
         .examples__photo:hover {
-          transform: none; } }
+          -webkit-transform: none;
+                  transform: none; } }
       @media only screen and (max-width: 37.5em) {
         .examples__photo:hover {
           outline: 0; } }
@@ -115,7 +117,9 @@ h2 {
 .row .col-1-of-3 {
   width: calc((100% - 2 * 4rem) / 3);
   float: left;
-  transition: transform .5s; }
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s; }
   .row .col-1-of-3:not(:nth-child(3)) {
     margin-right: 4rem; }
     @media only screen and (max-width: 56.25em) {
@@ -134,11 +138,14 @@ h2 {
 .section-darker {
   background-color: #e9edfd; }
 
-@supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+@supports ((-webkit-clip-path: polygon(0 0)) or (clip-path: polygon(0 0))) or (-webkit-clip-path: polygon(0 0)) {
   .section-downward {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 6rem), 50% 100%, 0% calc(100% - 6rem));
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 6rem), 50% 100%, 0% calc(100% - 6rem));
     padding: 2rem 0 9rem; } }
+
+.section-padding {
+  padding: 2rem 0 6rem; }
 
 header {
   background: #113BB2;
@@ -185,7 +192,8 @@ header {
     header .header nav {
       position: absolute;
       top: 50%;
-      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
       right: 0; }
       header .header nav ul li {
         display: inline-block;
@@ -210,7 +218,8 @@ header {
         header .header nav {
           position: relative;
           top: initial;
-          transform: initial;
+          -webkit-transform: initial;
+                  transform: initial;
           right: initial;
           text-align: center;
           margin-top: .5rem;
@@ -233,7 +242,8 @@ footer {
       margin: 0 2rem; }
       footer #social-links a img:hover {
         opacity: 0.9;
-        transform: translateY(-0.5rem) scale(1.1); }
+        -webkit-transform: translateY(-0.5rem) scale(1.1);
+                transform: translateY(-0.5rem) scale(1.1); }
 
 .home-intro {
   min-height: 37rem; }
@@ -255,6 +265,10 @@ footer {
 
 h3 {
   color: #1341C5; }
+
+.contain-1440 {
+  max-width: 144rem;
+  margin: 0 auto; }
 
 #resume h2 {
   font-size: 2.5rem;
