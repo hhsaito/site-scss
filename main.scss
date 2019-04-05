@@ -4,6 +4,8 @@
 @import "base/base";
 @import "base/typography";
 
+@import "components/breadcrumbs";
+@import "components/button";
 @import "components/examples";
 
 @import "layout/grid";
@@ -11,5 +13,6 @@
 @import "layout/footer";
 
 @import "pages/home";
+@import "pages/map";
 @import "pages/resume";
 @import "pages/whoozwho";

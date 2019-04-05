@@ -1,5 +1,6 @@
 .home-intro {
     min-height: 37rem;
+    padding-top: 2rem;
 }
 .harry_profile {
     border-radius: 50%;
@@ -20,7 +21,20 @@
         }
     }
 }
- 
-h3 {
-    color: $color-primary;
+
+#home-page {
+
+    .row {
+        .col-1-of-3 {
+            @include respond(tab-port) {
+                &:nth-child(3) {
+                    float: none;
+                    margin-right: auto;
+                    margin-left: auto;
+                }
+            }
+        }
+    }
 }
+
+

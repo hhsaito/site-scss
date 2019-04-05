@@ -11,13 +11,24 @@ body {
 
     p {
         margin-bottom: 1rem;
+
+        a {
+            text-decoration: none;
+            padding-bottom: .5rem;
+            color: $color-complimentary;
+            border-bottom: 1px dotted $color-complimentary;
+
+            @include respond( phone ) {
+                padding-bottom: .2rem;
+            }
+        
+            &:hover {
+                color: $color-primary;
+                border-bottom: 1px dotted $color-primary;
+            }
+        }
     }
 }
-
-a {
-    text-decoration: none;
-}
-
 
 h1 {
     font-size: 4rem;
@@ -33,7 +44,7 @@ h2 {
     margin: 2rem 0 3rem 0;
     text-align: center;
 
-    @include respond( phone ) {
-        font-size: 1.7rem;
-    }
+    // @include respond( phone ) {
+    //     font-size: 1.7rem;
+    // }
 }

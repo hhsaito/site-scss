@@ -1,0 +1,13 @@
+#older-example {
+    *, *::after, *::before, section {
+       box-sizing: initial;
+       
+       &.section-darker {
+           box-sizing: inherit;
+
+           .container {
+                box-sizing: inherit;
+           }
+       }
+    }
+}
